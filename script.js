@@ -1,15 +1,21 @@
 window.onload=init;
-
 function init(){
-    footerPosition();
+    positioning();
 }
-
-//当内容高度小于视口高度时，更改footer的位置使其位于视口底部
-function footerPosition(){
-    var bodyHeight=document.body.clientHeight
+//保持页脚和翻页按钮在页面最下方
+function positioning(){
+    var bodyHeight=document.body.clientHeight+80;
     var windowHeight= window.innerHeight;
-    var footerHeight=document.getElementById('footer');
+    var headerHeight=document.getElementById("header").clientHeight;
+    var footerHeight=document.getElementById('footer').clientHeight;
+    var contHeight=document.getElementById('content').clientHeight;
+    var footer=document.getElementById('footer');
+    var body=document.getElementById('content');
     if(bodyHeight<windowHeight){
-        footerHeight.style.bottom="0rem";
+        footer.style.bottom="0rem";
+    }
+    if(headerHeight+footerHeight+bodyHeight<windowHeight){
+        body.style.height=(windowHeight-headerHeight-footerHeight)/10-8+"rem";
     }
 }
+//clientHeight

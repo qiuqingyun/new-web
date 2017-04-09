@@ -11,9 +11,10 @@ header{
 }
 #content{
     width: 95%;
-    margin: 0rem auto;
+    margin: 0rem auto 8rem auto;
     border-top:0.3rem #3E606F solid;
     min-width: 80rem;
+    display: table;
 }
 footer{
     height: 4rem;
@@ -27,6 +28,30 @@ footer{
 footer>p{
     margin-left: 3rem;
 }
+ul{
+    list-style-type: none;
+}
+a:link,a:visited{
+    color: #3E606F;
+}
+#tableShow{
+    display: table-row;
+}
+#mainBody{
+    position: relative;
+    display: table-cell;
+    padding-bottom: 8rem;
+    padding-left: 5rem;
+}
+aside{
+    display: table-cell;
+    width: 26rem;
+    padding: 2rem 5rem 2rem 2rem;;
+}
+article{
+    margin-top: 3rem;
+}
+/*导航框*/
 nav,nav>ul{
     height: 5rem;
 }
@@ -39,7 +64,6 @@ nav{
 nav ul{
     margin: 0rem;
     padding: 0rem;
-    list-style-type: none;
 }
 
 nav li{
@@ -53,12 +77,10 @@ nav li a{
     padding: 0.9rem 1rem;
     font-weight: bold;
 }
-nav li a:link,nav li a:visited{
-    color: #3E606F;
-}
 nav li a:hover{
-    border-bottom:0.3rem #D1DBBD solid;
+    border-bottom:0.3rem #e3e9d7 solid;
 }
+/*搜索框*/
 header form{
     position: absolute;
     bottom: 0.3rem;
@@ -79,8 +101,8 @@ header form{
     margin: 0rem;
     position: relative;
     right:3.4rem;
-    background-color: #D1DBBD;
-    border-color:#D1DBBD; 
+    background-color: #e3e9d7;
+    border-color:#e3e9d7; 
     border-style: solid;
 }
 #search:focus{
@@ -90,10 +112,38 @@ header form{
     outline: none;
 }
 #button:hover{
-    background-color: rgba(209, 219, 189, 0.6);
-    border-color: rgba(209, 219, 189, 0.6);
+    background-color: #D1DBBD;
+    border-color: #D1DBBD;
+    cursor:pointer;
 }
 #button:active{
     background-color: #91AA9D;
     border-color: #91AA9D;
+    cursor:pointer;
+}
+/*页面导航*/
+#pageNavi{
+    position: absolute;
+    bottom: 0rem;
+    margin: 0rem auto;
+    width: 100%;
+}
+#pageNavi ul{
+    height: 2.8rem;
+    margin: 0rem;
+    padding: 0rem;
+    width: 100%;
+    text-align: center;
+}
+#pageNavi li{
+    display: inline;
+    font-size: 1.6rem;
+}
+#pageNavi li a{
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    background-color: #e3e9d7;
+}
+#pageNavi li a:hover{
+    background-color: #D1DBBD;
 }
