@@ -48,8 +48,8 @@ a:hover,a:active{
 }
 aside{
     display: table-cell;
-    width: 26rem;
-    padding: 2rem 5rem 2rem 2rem;;
+    width: 24rem;
+    padding: 2rem 5rem 2rem 4rem;;
 }
 /*文章列表*/
 .articleSyn{
@@ -201,7 +201,7 @@ header form{
 /*标签*/
 #tagsCloud a{
     padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     background-color: #e3e9d7;
     border-radius: 0.5rem;
     font-size: 1.8rem;
@@ -212,4 +212,18 @@ header form{
 }
 #tagsCloud a:hover,#tagsCloud a:active{
     color: #3E606F;
+}
+/*文章*/
+.wholeArticle{
+    background-color: rgb(240, 240, 240);
+    padding: 2rem;
+    margin: 3rem 0rem;
+    border-radius: 2rem;
+}
+.wholeArticle h1{
+    text-align: center;
+}
+.wholeArticle p{
+    line-height: 1.5;
+    text-indent:3.2rem;
 }
