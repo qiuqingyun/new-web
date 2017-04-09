@@ -34,6 +34,9 @@ ul{
 a:link,a:visited{
     color: #3E606F;
 }
+a:hover,a:active{
+    color: #e74c3c;
+}
 #tableShow{
     display: table-row;
 }
@@ -48,8 +51,50 @@ aside{
     width: 26rem;
     padding: 2rem 5rem 2rem 2rem;;
 }
-article{
+/*文章列表*/
+.articleSyn{
     margin-top: 3rem;
+    padding-bottom: 2.7rem;
+    border-bottom: 0.3rem #e3e9d7 solid;
+}
+.title{
+    border-left: 0.4rem #e3e9d7 solid;
+    padding-left: 0.6rem; 
+}
+.articleMeta{
+    margin: 1rem 0rem;
+    padding-left: 1rem;
+}
+.metaTime{
+    margin-right: 1rem;
+}
+.synopsis{
+    height: 6rem;
+    margin: 1rem;
+    padding-top: 1rem;
+    border-top: thin #e3e9d7 solid;
+    overflow: hidden;
+}
+.synopsis p{
+    padding-top:0.2rem; 
+}
+.contReading{
+    padding: 0.5rem 2rem;
+    background-color: #e3e9d7;
+    float: right;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+.contReading:hover{
+    background-color: #D1DBBD;
+    color: #3E606F;
+}
+.haveImsges{
+    height: 13rem;
+}
+.haveImsges img{
+    height:130px;
+    margin-right: 2rem;
+    float: left;
 }
 /*导航框*/
 nav,nav>ul{
@@ -65,7 +110,9 @@ nav ul{
     margin: 0rem;
     padding: 0rem;
 }
-
+nav a:hover,nav a:active{
+    color: #3E606F;
+}
 nav li{
     float: left;
     height: 5rem;
@@ -143,7 +190,26 @@ header form{
     padding: 0.5rem 1rem;
     margin-left: 0.5rem;
     background-color: #e3e9d7;
+    border-radius: 0.5rem;
 }
 #pageNavi li a:hover{
     background-color: #D1DBBD;
+}
+#pageNavi a:hover,#pageNavi a:active{
+    color: #3E606F;
+}
+/*标签*/
+#tagsCloud a{
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    background-color: #e3e9d7;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    line-height: 4rem;
+}
+#tagsCloud a:hover{
+    background-color: #D1DBBD;
+}
+#tagsCloud a:hover,#tagsCloud a:active{
+    color: #3E606F;
 }

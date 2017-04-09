@@ -18,4 +18,6 @@ function positioning(){
         body.style.height=(windowHeight-headerHeight-footerHeight)/10-8+"rem";
     }
 }
-//clientHeight
+function areThereAnyImages(){
+
+}
