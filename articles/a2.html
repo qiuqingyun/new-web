@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/script.js"></script>
+	<title>利用jQuery实现悬浮弹出提示框功能</title>
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+			<img src="../images/logo1.png" alt="logo" height="100px">
+			<nav>
+                <ul>
+                    <li><a href="../index.html">主页</a></li>
+                    <li><a href="../articles.html">文章</a></li>
+                </ul>
+			</nav>
+			<form>
+				<input type="search" id="search" placeholder="搜索内容……">
+				<input type="button" id="button" value="SEARCH">
+			</form>
+		</header>
+		<div id="content">
+			<article class="wholeArticle">
+				<h1>利用jQuery实现悬浮弹出提示框功能</h1>
+				<!--文章信息-->
+				<div class="articleMeta wholeArticleMeta">
+					<span class="metaTime">
+						<time datetime="2016-08-13">2016-8-13</time>
+					</span>
+				</div>
+				<!--下面是正文-->
+				<p>我们在日常浏览网站的时候，经常会遇到这样一幕：当鼠标移到某些地
+                    方时，其旁边便会弹出一个小小的提示框，告知一些信息。而当鼠标
+                    移开的时候，这个提示框也会随之消失。抑或是点击某个链接，弹出一个
+                    覆盖全页的悬浮框。</p>
+				<div class="imgs">
+                    <a href="images/a21.jpg"><img src="thumb/a21.jpg" alt="第一种"></a>
+                    <a href="images/a22.jpg"><img src="thumb/a22.jpg" alt="第二种"></a>
+                </div>
+                <p>其中第二种通常会带有一个半透明遮罩，用以区分提示框与原页面。这样做
+                    的好处显而易见，不仅美观，而且不用在各个页面之间来回跳跃，节省了浏
+                    览时间。要实现这个功能，主要用到了<code>jQuery hide()</code>和
+                    <code>show()</code>方法。第一种还要结合<code>mouseenter()</code>
+                    和<code>mouseleave()</code>方法使用。</p>
+                <p>我想了一种简陋的实现方法，还算容易理解。</p>
+                <p>第一种是当鼠标移到目标元素上时显示，且不会随着鼠标移动（在所选元素内移动）而改变位置。
+                    这样只需事先在预定位置设置好提示框，并且在CSS中设置<code>display: none;</code>这样，加载页面时
+                    提示框就不会显示。然后，设置当鼠标进入目标元素时显示提示框，离开目标元素时隐藏提示框
+                    。然而，这样无法做到以淡出的方式显示提示信息，也无法做到将鼠标移动到提示信息的区域之上
+                    ，提示信息继续保留。</p>
+                <p>第二种要简单些，事先在预定位置设置好提示框，设置隐藏。然后目标链接设
+                    置<code>onclick="jQuery(“#提示框ID”).show()"</code>，就可以实现点击显示了。然后在提示框中
+                    设置一个返回链接，设置<cide>onclick="jQuery('#提示框ID').hide()"</cide>，就可以实现点击返回了。</p>
+			</article>
+		</div>
+		<footer id="footer">
+			<p>Designed by Qiu Qingyun.</p>
+		</footer>
+	</div>
+</body>
+</html>

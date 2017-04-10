@@ -18,6 +18,8 @@ function positioning(){
         body.style.height=(windowHeight-headerHeight-footerHeight)/10-8+"rem";
     }
 }
-function areThereAnyImages(){
-
+//function areThereAnyImages(){}
+function widthControl(){
+    var windowWidth= window.innerWidth;
+    alert(windowWidth);
 }

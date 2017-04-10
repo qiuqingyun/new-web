@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/script.js"></script>
+	<title>工欲善其事，必先利其器</title>
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+			<img src="../images/logo1.png" alt="logo" height="100px">
+			<nav>
+                <ul>
+                    <li><a href="../index.html">主页</a></li>
+                    <li><a href="../articles.html">文章</a></li>
+                </ul>
+			</nav>
+			<form>
+				<input type="search" id="search" placeholder="搜索内容……">
+				<input type="button" id="button" value="SEARCH">
+			</form>
+		</header>
+		<div id="content">
+			<article class="wholeArticle">
+				<h1>工欲善其事，必先利其器</h1>
+				<!--文章信息-->
+				<div class="articleMeta wholeArticleMeta">
+					<span class="metaTime">
+						<time datetime="2016-08-15">2016-8-15</time>
+					</span>
+				</div>
+				<!--下面是正文-->
+                <blockquote>
+                    子贡问为仁。子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”	
+                                                                                    ——《论语·卫灵公》
+                </blockquote>
+                <p>要做好一件事，工具是非常重要的。学习前端技术，自然要用到代码编辑器。我选择了Sublime Text，一款被认为“性感无比”编辑器。在使用了近两周之后，感觉还是名副其实的，启动无比迅速，语法高亮、代码提示补全、代码折叠等功能都是相当实用的。
+工匠想要使他的工作做好，一定要先让工具锋利。对于Sublime Text，它还有更多强大的功能未被用到。在参加了相关课程之后，我学习到了一些快捷键和可以提高效率的技巧，记录在此。</p>
+                <h3>Sublime Text快捷键</h3>
+
+                <code>Tab</code> 缩进 <br>
+                <code>Shift</code> + <code>Tab</code> 去除缩进 <br>
+                   
+                <code>Ctrl</code> + <code>Z</code> 撤销 <br>
+                <code>Ctrl</code> + <code>Y</code> 恢复撤销 <br>
+                
+                <code>Ctrl</code> + <code>F</code> 查找 <br>
+                <code>Ctrl</code> +<code>H</code> 替换 <br>
+                
+                <code>Ctrl</code> + <code>V</code> 粘贴 <br>
+                <code>Ctrl</code> + <code>Shift</code> + <code>V</code> 粘贴并自动缩进 <br>
+
+                <code>Ctrl</code> + Enter</code> 插入行 <br>
+                <code>Ctrl</code> + <code>Shift</code> + <code>Enter</code> 插入前行 <br>
+
+                <code>Ctrl</code> + <code>L</code> 选择行  <br>
+                <code>Ctrl</code> + <code>D</code> 选择所在词 <br>
+                <code>Ctrl</code> + <code>K</code> --> <code>Ctrl</code> +<code>D</code> 跳过选取所在词 <br>
+
+                <code>Ctrl</code> + <code>/</code> 注释整行（如已选择内容，同“<code>Ctrl</code>+<code>Shift</code>+/”效果） <br>
+                <code>Ctrl</code> + <code>Shift</code> + <code>/</code> 注释已选择内容 <br>
+
+                <code>Ctrl</code> + <code>[</code> 减少缩进 <br>
+                <code>Ctrl</code> + <code>]</code> 增加缩进 <br>
+
+                <code>Ctrl</code> + <code>Shift</code> + <code>[</code> 折叠代码 <br>
+                <code>Ctrl</code> + <code>Shift</code> +<code>]</code> 展开代码 <br>
+
+                <code>Ctrl</code> + <code>K</code> + <code>T</code> 折叠属性 <br>
+                <code>Ctrl</code> + <code>K</code> + <code>0</code> 展开所有属性 <br>
+
+                <code>Ctrl</code> + <code>Shift</code> + <code>UP</code>与上行互换 <br>
+                <code>Ctrl</code> + <code>Shift</code> + <code>DOWN</code>与下行互换 <br>
+
+                <code>Ctrl</code> + <code>M</code> 光标移动至括号内开始或结束的位置 <br>
+                <code>Ctrl</code> + <code>Shift</code> + <code>M</code> 选择括号内的内容（继续按选择父括号） <br>
+
+                <code>Ctrl</code> + <code>Shift</code> + <code>P</code> 命令模式 <br>
+                <code>Ctrl</code> + <code>N</code> 新建文件 <br>
+                <code>Ctrl</code> + <code>Shift</code> + <code>A</code> 选择光标位置父标签对儿 <br>
+                <code>Ctrl</code> + <code>Shift</code> + <code>D</code> 复制当前行 <br>
+                <code>Alt</code> + <code>F3</code> 全选相同模式 <br>
+                <code>Ctrl</code> + <code>Shift</code> + <code>L</code> 拆分行 <br>
+                <code>Ctrl</code> + <code>T</code> 词互换 <br>
+                <code>Ctrl</code> + <code>K</code> + <code>Backspace</code> 从光标处删除至行首 <br>
+
+                <h3>Sublime Text技巧</h3>
+
+                <h4>产生多行游标</h4>
+
+                <code>Ctrl</code> + <code>D</code> 多次选择 <br>
+                <code>Ctrl</code> + <code>D</code> --> <code>Alt</code> + <code>F3</code> 全选 <br>
+                <code>Ctrl</code> + <code>A</code> --> <code>Ctrl</code> + <code>Shift</code> + <code>L</code> 拆分行 <br>
+                鼠标放在单词上，按<code>Shift</code> + 鼠标右键下拉
+
+                <h4>快捷输入</h4>
+                                        
+                例1：输入10个div :
+                输入 <code>div*10</code> ，然后 <code>Tab</code> （该快捷键修改过） <br>
+                例2：输入10个带item类的li元素 :
+                输入 <code>ul>.item*10</code> ，然后 <code>Tab</code> （该快捷键修改过）<br> 
+                例3：输入10个带item类的li元素且每个li的内容是test1、test2这样的内容 :
+                输入 <code>ul>.item{test$}*10</code> ，然后 <code>Tab</code> （该快捷键修改过） <br>
+
+            </article>
+		</div>
+		<footer id="footer">
+			<p>Designed by Qiu Qingyun.</p>
+		</footer>
+	</div>
+</body>
+</html>

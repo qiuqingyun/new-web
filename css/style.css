@@ -28,9 +28,6 @@ footer{
 footer>p{
     margin-left: 3rem;
 }
-ul{
-    list-style-type: none;
-}
 a:link,a:visited{
     color: #3E606F;
 }
@@ -51,50 +48,21 @@ aside{
     width: 24rem;
     padding: 2rem 5rem 2rem 4rem;;
 }
-/*文章列表*/
-.articleSyn{
-    margin-top: 3rem;
-    padding-bottom: 2.7rem;
-    border-bottom: 0.3rem #e3e9d7 solid;
+ul{
+    list-style-type: none;
 }
-.title{
-    border-left: 0.4rem #e3e9d7 solid;
-    padding-left: 0.6rem; 
+code{
+    font-family: Consolas;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.4rem;
 }
-.articleMeta{
-    margin: 1rem 0rem;
-    padding-left: 1rem;
-}
-.metaTime{
-    margin-right: 1rem;
-}
-.synopsis{
-    height: 6rem;
-    margin: 1rem;
-    padding-top: 1rem;
-    border-top: thin #e3e9d7 solid;
-    overflow: hidden;
-}
-.synopsis p{
-    padding-top:0.2rem; 
-}
-.contReading{
-    padding: 0.5rem 2rem;
-    background-color: #e3e9d7;
-    float: right;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-}
-.contReading:hover{
-    background-color: #D1DBBD;
-    color: #3E606F;
-}
-.haveImsges{
-    height: 13rem;
-}
-.haveImsges img{
-    height:130px;
-    margin-right: 2rem;
-    float: left;
+blockquote{
+    border-left: 0.5rem #e3e9d7 solid; 
+    padding:2rem;
+    margin-left:3.2rem;
+    font-weight: bold;
 }
 /*导航框*/
 nav,nav>ul{
@@ -147,13 +115,13 @@ header form{
     height: 3rem;
     margin: 0rem;
     position: relative;
-    right:3.4rem;
+    right:3.3rem;
     background-color: #e3e9d7;
     border-color:#e3e9d7; 
     border-style: solid;
 }
 #search:focus{
-    outline-color: #D1DBBD;
+    outline-color: #e3e9d7;
 }
 #button:focus{
     outline: none;
@@ -213,17 +181,89 @@ header form{
 #tagsCloud a:hover,#tagsCloud a:active{
     color: #3E606F;
 }
+/*文章列表*/
+.articleSyn{
+    margin-top: 3rem;
+    padding-bottom: 3.2rem;
+    border-bottom: 0.3rem #e3e9d7 solid;
+}
+.title{
+    border-left: 0.4rem #e3e9d7 solid;
+    padding-left: 0.6rem; 
+}
+.articleMeta{
+    margin: 1rem 0rem;
+    padding-left: 1rem;
+}
+.metaTime{
+    margin-right: 1rem;
+}
+.synopsis{
+    height: 7rem;
+    margin: 1rem;
+    padding-top: 1rem;
+    border-top: thin #e3e9d7 solid;
+    overflow: hidden;
+}
+.synopsis p{
+    padding-top:0.2rem; 
+}
+.contReading{
+    padding: 0.5rem 2rem;
+    background-color: #e3e9d7;
+    float: right;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+.contReading:hover{
+    background-color: #D1DBBD;
+    color: #3E606F;
+}
+.haveImsges{
+    height: 13rem;
+}
+.haveImsges img{
+    height:130px;
+    margin-right: 2rem;
+    float: left;
+}
 /*文章*/
 .wholeArticle{
-    background-color: rgb(240, 240, 240);
-    padding: 2rem;
-    margin: 3rem 0rem;
+    /*background-color: rgb(240, 240, 240);*/
+    margin: 3rem auto;
     border-radius: 2rem;
+    width: 80%;
 }
 .wholeArticle h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 8rem;
+    text-align: center;
+}
+.wholeArticleMeta{
+    margin-bottom: 4rem;
+    padding-left: 0rem;
+    color: gray;
     text-align: center;
 }
 .wholeArticle p{
     line-height: 1.5;
     text-indent:3.2rem;
+}
+.wholeArticle pre{
+    color: #c7254e;
+    padding: 2rem;
+    background: #ebeef5;
+    overflow:auto;
+}
+.codeBlock{
+    color: #c7254e;
+    background-color: transparent;
+    border:none;
+    padding:0rem;
+}
+.wholeArticle img{
+    margin: 2rem;
+}
+.imgs{
+    text-align:center;        
 }

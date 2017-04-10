@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/script.js"></script>
+	<title>CSS初始化</title>
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+			<img src="../images/logo1.png" alt="logo" height="100px">
+			<nav>
+                <ul>
+                    <li><a href="../index.html">主页</a></li>
+                    <li><a href="../articles.html">文章</a></li>
+                </ul>
+			</nav>
+			<form>
+				<input type="search" id="search" placeholder="搜索内容……">
+				<input type="button" id="button" value="SEARCH">
+			</form>
+		</header>
+		<div id="content">
+			<article class="wholeArticle">
+				<h1>CSS初始化</h1>
+				<div class="articleMeta wholeArticleMeta">
+					<span class="metaTime">
+						<time datetime="2016-08-09"> 2016-8-9</time>
+					</span>
+				</div>
+
+                        <p>今天才听说了CSS初始化这个东西。那么，什么是CSS初始化呢？又为什么要CSS初始化呢？</p>
+                        <p>我们都知道，浏览器有很多种，比如IE，Chrome，Firefox等等。各个浏览器的标签默认值不同，同一个网页的显示就会有差异。别小看这点差异，一点点差异也是能逼死强迫症的。那么为了兼容各个不同的浏览器，就应该将这些不同的默认值设定成相同的。这个过程就是CSS初始化，目的是为了兼容不同的浏览器，形成统一。</p>
+                        <p>当然，这种初始化是十分粗暴的，相当于扒去了标签原本穿着的衣服，然后再一一派发。当然也有温和的Normalize.css，这个以后再说。</p>
+                        <p>初始化的方法有很多种，其中最简单的就是 <code> *{margin:0px; padding:0px;} </code > </p>
+                        <p>然而，<code>*</code>作为通配符，当网站很大的时候，这样逐一地进行初始化必然会降低效率。</p>
+                        <p>下面粘贴一些大型网站的初始化代码以供参考：</p><br />
+
+                        <h2>雅虎工程师提供的CSS初始化示例代码</h2>
+
+<pre><code class="codeBlock">body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{ margin:0; padding:0; }  
+body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; } 
+td,th,caption { font-size:14px; } 
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; } 
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;} 
+a { color:#555; text-decoration:none; } 
+a:hover { text-decoration:underline; } 
+img { border:none; } 
+ol,ul,li { list-style:none; } 
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; } 
+table { border-collapse:collapse; } 
+html {overflow-y: scroll;}  
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;} 
+.clearfix { *zoom:1; }</code></pre>
+
+
+<h2>腾讯官网 样式初始化</h2>
+<pre><code class="codeBlock">body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}  
+body{font:12px"宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%;}  
+a{color:#2d374b;text-decoration:none}  
+a:hover{color:#cd0200;text-decoration:underline}  
+em{font-style:normal}  
+li{list-style:none}  
+img{border:0;vertical-align:middle}  
+table{border-collapse:collapse;border-spacing:0}  
+p{word-wrap:break-word}</code></pre>
+
+<h2>新浪官网 样式初始化</h2>
+<pre><code class="codeBlock">body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}  
+body{background:#fff;color:#333;font-size:12px; margin-top:5px;font-family:"SimSun","宋体","Arial Narrow";}  
+ul,ol{list-style-type:none;}  
+select,input,img,select{vertical-align:middle;}  
+a{text-decoration:none;}  
+a:link{color:#009;}  
+a:visited{color:#800080;}  
+a:hover,a:active,a:focus{color:#c00;text-decoration:underline;}</code></pre>
+<h2>淘宝官网 样式初始化</h2>
+<pre><code class="codeBlock">body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li,pre,form,fieldset,legend,button,input,textarea,th,td {margin:0; padding:0;}  
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }  
+h1, h2, h3, h4, h5, h6{ font-size:100%; }  
+address, cite, dfn, em, var { font-style:normal; }  
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }  
+small{ font-size:12px; }  
+ul, ol { list-style:none; }  
+a { text-decoration:none; }  
+a:hover { text-decoration:underline; }  
+sup { vertical-align:text-top; }  
+sub{ vertical-align:text-bottom; }  
+legend { color:#000; }  
+fieldset, img { border:0; }  
+button, input, select, textarea { font-size:100%; }  
+table { border-collapse:collapse; border-spacing:0; }</code></pre>
+
+<h2>网易官网 样式初始化</h2>
+<pre><code class="codeBlock">html {overflow-y:scroll;}  
+body {margin:0; padding:29px00; font:12px"\5B8B\4F53",sans-serif;background:#ffffff;}  
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}  
+table,td,tr,th{font-size:12px;}  
+li{list-style-type:none;}  
+img{vertical-align:top;border:0;}  
+ol,ul {list-style:none;}  
+h1,h2,h3,h4,h5,h6{font-size:12px; font-weight:normal;}  
+address,cite,code,em,th {font-weight:normal; font-style:normal;}</code></pre>
+
+			
+            </article>
+		</div>
+		<footer id="footer">
+			<p>Designed by Qiu Qingyun.</p>
+		</footer>
+	</div>
+</body>
+</html>
