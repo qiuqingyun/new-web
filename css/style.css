@@ -1,6 +1,11 @@
 @import url(normalize.css);
+html{
+    background: #3E606F;
+}
 body{
+    background-color: white;
     color: #193441;
+    min-width: 80rem;
 }
 header{
     height: 10rem;
@@ -20,7 +25,6 @@ footer{
     height: 4rem;
     width: 100%;
     line-height: 4rem;
-    position:absolute;
     background-color: #3E606F;
     min-width: 80rem;
     color: #FCFFF5;
@@ -222,7 +226,7 @@ header form{
     height: 13rem;
 }
 .haveImsges img{
-    height:130px;
+    height:13rem;
     margin-right: 2rem;
     float: left;
 }
@@ -231,7 +235,7 @@ header form{
     /*background-color: rgb(240, 240, 240);*/
     margin: 3rem auto;
     border-radius: 2rem;
-    width: 80%;
+    width: 70%;
 }
 .wholeArticle h1{
     font-size: 3rem;
@@ -253,7 +257,8 @@ header form{
     color: #c7254e;
     padding: 2rem;
     background: #ebeef5;
-    overflow:auto;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 .codeBlock{
     color: #c7254e;

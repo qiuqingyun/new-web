@@ -26,7 +26,7 @@ html {
  */
 
 body {
-  margin: 0;
+  margin: 0rem;
   font-size: 1.6rem;
 }
 
@@ -315,12 +315,12 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 
-button:-moz-focusring,
+/*button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
-}
+}不知道出了什么问题*/
 
 /**
  * Change the border, margin, and padding in all browsers (opinionated).
@@ -464,9 +464,4 @@ template {
 
 [hidden] {
   display: none;
-}
-
-/*add*/
-p{
-  margin: 0rem;
 }

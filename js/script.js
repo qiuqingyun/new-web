@@ -1,6 +1,6 @@
 window.onload=init;
 function init(){
-    positioning();
+    //positioning();
 }
 //保持页脚和翻页按钮在页面最下方
 function positioning(){
@@ -17,7 +17,8 @@ function positioning(){
     if(headerHeight+footerHeight+bodyHeight<windowHeight){
         body.style.height=(windowHeight-headerHeight-footerHeight)/10-8+"rem";
     }
-}
+}//bug:当窗口缩小后会改变位置
+
 //function areThereAnyImages(){}
 function widthControl(){
     var windowWidth= window.innerWidth;
