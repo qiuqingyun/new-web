@@ -1,3 +1,45 @@
 #content{
     display: block;
 }
+.wholeArticle{
+    /*background-color: rgb(240, 240, 240);*/
+    margin: 3rem auto;
+    border-radius: 2rem;
+    width: 70%;
+}
+.wholeArticle h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 8rem;
+    text-align: center;
+}
+.wholeArticleMeta{
+    margin-bottom: 4rem;
+    padding-left: 0rem;
+    color: gray;
+    text-align: center;
+}
+.wholeArticle p{
+    line-height: 1.5;
+    text-indent:3.2rem;
+}
+.wholeArticle pre{
+    color: #c7254e;
+    padding: 2rem;
+    background: #ebeef5;
+    /*white-space: pre-wrap;
+    word-break: break-all;*/
+    overflow: auto;
+}
+.blockCode{
+    color: #c7254e;
+    background-color: transparent;
+    border:none;
+    padding:0rem;
+}
+.wholeArticle img{
+    margin: 2rem;
+}
+.longWord{
+    word-break:break-all;
+}

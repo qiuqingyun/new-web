@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../js/script.js"></script>
+	<title>HTML</title>
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+			<img src="../images/logo1.png" alt="logo" height="100px">
+			<nav>
+                <ul>
+                    <li><a href="../index.html">主页</a></li>
+                    <li><a href="../articles.html">文章</a></li>
+                </ul>
+			</nav>
+			<form>
+				<input type="search" id="search" placeholder="搜索内容……">
+				<input type="button" id="button" value="SEARCH">
+			</form>
+		</header>
+		<div id="content">
+			<div id="tableShow">
+				<div id="mainBody">
+                    <h1>Tag:HTML</h1>
+
+					<!--下面是文章列表-->
+                    <article class="articleSyn">
+						<h2 class="title"><a href="../articles/a4.html">Iconfont初体验</a></h2>
+						<div class="articleMeta">
+							<span class="metaTime">
+								时间：
+								<time datetime="2016-08-17">2016-8-17</time>
+							</span>
+							<span class="metaCategories">
+								分类：
+								<a href="html.html">HTML</a>
+							</span>
+						</div>
+						<div class="synopsis haveImsges"><!-- 可选class名：haveImsges -->
+							<a href="../articles/a4.html"><img src="../articles/thumb/a41.jpg"></a><!--sr="articles/thumb/ .jpg"-->
+							<p>本打算去网上找一些Icon图标，“美化”一下自己的网站。然而，我并没有到平时
+								常去的EASYICON，而是鬼使神差地来到了一个叫ICONFONT的网站。至此，我还
+								不知道Iconfont是什么东西。如往常一样挑选好图标，点击下载。可是，下载
+								来的却并不是一个个的图标，而是一堆奇怪的文件……</p>
+						</div>
+						<a class="contReading" href="../articles/a4.html">继续阅读</a>
+					</article>
+
+					<!--下面是页面导航-->
+                    <div id="pageNavi">
+						<ul>
+							<li><a href="">第一页</a></li>
+							<li><a href="">上一页</a></li>
+							<li><a href="">1</a></li>
+							<li><a href="">下一页</a></li>
+							<li><a href="">最后一页</a></li>
+						</ul>
+					</div>
+				</div>
+				<aside id="sidebar">
+					<div id="tagsCloud">
+						<h2>标签：</h2>
+						<a href="XXX.html">XXX</a>
+						<a href="css.html">CSS</a>
+						<a href="jQuery.html">jQuery</a>
+						<a href="tool.html">Tool</a>
+						<a href="html.html">HTML</a>
+						<a href="hardward.html">硬件</a>
+					</div>
+				</aside>
+			</div>
+		</div>
+		<footer id="footer">
+			<p>Designed by Qiu Qingyun.</p>
+		</footer>
+	</div>
+</body>
+</html>
