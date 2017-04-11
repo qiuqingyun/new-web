@@ -1,6 +1,6 @@
 window.onload=init;
 function init(){
-    //positioning();
+    positioning();
 }
 //保持页脚和翻页按钮在页面最下方
 function positioning(){

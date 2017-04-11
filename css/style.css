@@ -1,6 +1,6 @@
 @import url(normalize.css);
 html{
-    background: #3E606F;
+    /*background: #3E606F;*/
 }
 body{
     background-color: white;
@@ -22,6 +22,7 @@ header{
     display: table;
 }
 footer{
+    position: absolute;
     height: 4rem;
     width: 100%;
     line-height: 4rem;
@@ -30,6 +31,7 @@ footer{
     color: #FCFFF5;
 }
 footer>p{
+    margin: 0rem;
     margin-left: 3rem;
 }
 a:link,a:visited{
@@ -257,8 +259,9 @@ header form{
     color: #c7254e;
     padding: 2rem;
     background: #ebeef5;
-    white-space: pre-wrap;
-    word-break: break-all;
+    /*white-space: pre-wrap;
+    word-break: break-all;*/
+    overflow: auto;
 }
 .codeBlock{
     color: #c7254e;
