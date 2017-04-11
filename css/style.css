@@ -215,14 +215,13 @@ header form{
     margin-right: 1rem;
 }
 .synopsis{
-    height: 7rem;
     margin: 1rem;
     padding-top: 1rem;
     border-top: thin #e3e9d7 solid;
     overflow: hidden;
 }
-.synopsis p{
-    padding-top:0.2rem; 
+.synopsis p{ 
+    margin: 0rem;
 }
 .contReading{
     padding: 0.5rem 2rem;
@@ -234,11 +233,11 @@ header form{
     background-color: #D1DBBD;
     color: #3E606F;
 }
-.haveImsges{
-    height: 13rem;
+.haveImsges p{
+    padding-left: 22rem;
 }
 .haveImsges img{
-    height:13rem;
+    width:20rem;
     margin-right: 2rem;
     float: left;
 }
