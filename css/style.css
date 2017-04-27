@@ -223,6 +223,11 @@ header form{
 .synopsis p{ 
     margin: 0rem;
 }
+.synopsis img{
+    width:20rem;
+    margin-right: 2rem;
+    float: left;
+}
 .contReading{
     padding: 0.5rem 2rem;
     background-color: #e3e9d7;
@@ -233,7 +238,7 @@ header form{
     background-color: #D1DBBD;
     color: #3E606F;
 }
-.haveImsges p{
+/*.haveImsges p{
     padding-left: 22rem;
 }
 .haveImsges img{
@@ -241,3 +246,4 @@ header form{
     margin-right: 2rem;
     float: left;
 }
+*/
