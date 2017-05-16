@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/article.css">
 	<script src="../js/script.js"></script>
-	<title>如何避免超长单词超出容器边界</title>
+	<title>如何避免超长单词超出容器边界 | 仇卿云的个人网站</title>
 </head>
 <body>
 	<div id="container">
@@ -13,7 +13,7 @@
 			<img src="../images/logo1.png" alt="logo" height="100px">
 			<nav>
                 <ul>
-                    <li><a href="../index.html">主页</a></li>
+                    <li><a href="../index.html">首页</a></li>
                     <li><a href="../articles.html">文章</a></li>
                 </ul>
 			</nav>
@@ -33,19 +33,19 @@
 				</div>
 				<!--下面是正文-->
 				<p>我们都知道，英语单词的移行是有一定的规则的，不能随意地将一个词分到两行。所以在没有人为的干预下，浏览器会将放不下的单词移到下一行显示。</p>
-                <div class="imgs"><a href="images/a51.png "><img src="thumb/a51.png " alt="正常显示" title="点击查看原图"></a></div>
+                <div class="imgs"><a target="blank" href="images/a51.jpg "><img src="thumb/a51.jpg " alt="正常显示" title="点击查看原图"></a></div>
                 <p>那么，会不会出现即使移行也放不下的情况呢？</p>
                 <blockquote class="longWord">bababadalgharaghtakamminarronnkonnbronntonnerronntuonnthunntrovarrhounawnskawntoohoohoordenenthurnuk——由 100个字母 组成，出现在爱尔兰作家乔埃斯(James Joyce,1882-1942)作品Finnegans Wake的扉页，代表“亚当和夏娃的堕落”。</blockquote>
                 <p>默认情况下，浏览器是不会将这个单词断开的。这样就会出现一个问题，多出来的字母往哪儿放呢？答案是超出容器边界继续显示。</p>
-                <div class="imgs"><a href="images/a52.png "><img src="thumb/a52.png " alt="超出边框" title="点击查看原图"></a></div>
+                <div class="imgs"><a target="blank" href="images/a52.jpg "><img src="thumb/a52.jpg " alt="超出边框" title="点击查看原图"></a></div>
                 <p>
 CSS3中有一个<code>word-wrap</code> 属性，就能解决这个问题。<code>word-wrap</code>属性允许长单词或 URL 地址换行到下一行。
 <code>word-wrap</code>属性的默认值为<code>normal</code>，即只在允许的断字点换行。当设置了<code>word-wrap:break-word;</code> 之后，浏览器就会在长单词或 URL 地址内部进行换行。</p>
-                <div class="imgs"><a href="images/a53.png "><img src="thumb/a53.png " alt="word-wrap" title="点击查看原图"></a></div>
+                <div class="imgs"><a target="blank" href="images/a53.jpg "><img src="thumb/a53.jpg " alt="word-wrap" title="点击查看原图"></a></div>
                 <p>但是，仔细观察可以发现，上图的word之后出现了大片空白。前面提到，浏览器会将放不下的单词移到下一行显示。可是，这里空了那么多地儿，多么可惜呀！
 CSS3中还有一个<code>word-break</code> 属性。<code>word-break</code> 属性规定自动换行的处理方法。通过使用<code>word-break</code> 属性，可以让浏览器实现在任意位置的换行。
 它有三个值，<code>normal，break-all</code>和<code>keep-all</code>。分别规定“使用浏览器默认的换行规则”， “允许在单词内换行”和“只能在半角空格或连字符处换行”。常用的是<code>word-break:break-all;</code> 即使用最粗暴方式来移行。</p>
-                <div class="imgs"><a href="images/a54.png "><img src="thumb/a54.png " alt="word-break" title="点击查看原图"></a></div>
+                <div class="imgs"><a target="blank" href="images/a54.jpg "><img src="thumb/a54.jpg " alt="word-break" title="点击查看原图"></a></div>
                 <p>这样可以尽可能的节省空间，但是会降低可读性。</p>
 			</article>
 		</div>

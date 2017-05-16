@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/article.css">
 	<script src="../js/script.js"></script>
-	<title>报警器模型</title>
+	<title>报警器模型 | 仇卿云的个人网站</title>
 </head>
 <body>
 	<div id="container">
@@ -13,7 +13,7 @@
 			<img src="../images/logo1.png" alt="logo" height="100px">
 			<nav>
                 <ul>
-                    <li><a href="../index.html">主页</a></li>
+                    <li><a href="../index.html">首页</a></li>
                     <li><a href="../articles.html">文章</a></li>
                 </ul>
 			</nav>
@@ -40,98 +40,98 @@
 焊洞洞板真的是超级难受。因为要把led和探测器等东西露在盒子外面，arduino核心就没有地方放了。为了避免将核心放在背面，我又剪了一块洞洞板专门用来插核心，顺便供电。这样一来就要连接许多飞线。因为空间狭小，焊起来就十分憋屈。
 其实制作外壳才是所有工作中最难的。为了在外壳上开孔，没有钻孔工具的我只好用电烙铁来烧。做的时候整个寝室就是一股浓郁的塑料燃烧的味道。这种体验真的不要再来第二次。</p>
 				<div class="imgs">
-					<a href="images/a71.png "><img src="thumb/a71.png " alt="外观" title="点击查看原图"></a>
-					<a href="images/a72.png "><img src="thumb/a72.png " alt="人体热释电传感器" title="点击查看原图"></a>
-					<a href="images/a73.png "><img src="thumb/a73.png " alt="其他元件" title="点击查看原图"></a>
-					<a href="images/a74.png "><img src="thumb/a74.png " alt="水银开关" title="点击查看原图"></a>
-					<a href="images/a75.png "><img src="thumb/a75.png " alt="蜂鸣器" title="点击查看原图"></a>
-					<a href="images/a76.png "><img src="thumb/a76.png " alt="开发板" title="点击查看原图"></a>
-					<a href="images/a77.png "><img src="thumb/a77.png " alt="外壳" title="点击查看原图"></a>
+					<a target="blank" href="images/a71.jpg "><img src="thumb/a71.jpg " alt="外观" title="点击查看原图"></a>
+					<a target="blank" href="images/a72.jpg "><img src="thumb/a72.jpg " alt="人体热释电传感器" title="点击查看原图"></a>
+					<a target="blank" href="images/a73.jpg "><img src="thumb/a73.jpg " alt="其他元件" title="点击查看原图"></a>
+					<a target="blank" href="images/a74.jpg "><img src="thumb/a74.jpg " alt="水银开关" title="点击查看原图"></a>
+					<a target="blank" href="images/a75.jpg "><img src="thumb/a75.jpg " alt="蜂鸣器" title="点击查看原图"></a>
+					<a target="blank" href="images/a76.jpg "><img src="thumb/a76.jpg " alt="开发板" title="点击查看原图"></a>
+					<a target="blank" href="images/a77.jpg "><img src="thumb/a77.jpg " alt="外壳" title="点击查看原图"></a>
 				</div>
 				<p>最后贴上程序代码：</p>
 				<pre>
 					<code class="blockCode">
-int fast=7;//快速开关
-int led1=9;
-int led2=10;
-int led3=8;//工作指示灯
-int buzzer=11;//蜂鸣器引脚
-int inductor = 12;//探测器引脚
-float sinVal1;//sin函数值1
-float sinVal2;//sin函数值2
-int toneVal;//蜂鸣器频率
-int brightness = 0;//LED呼吸初始亮度
-int fadeAmount = 5; //呼吸变化频率
-int z=0;
+  int fast=7;//快速开关
+  int led1=9;
+  int led2=10;
+  int led3=8;//工作指示灯
+  int buzzer=11;//蜂鸣器引脚
+  int inductor = 12;//探测器引脚
+  float sinVal1;//sin函数值1
+  float sinVal2;//sin函数值2
+  int toneVal;//蜂鸣器频率
+  int brightness = 0;//LED呼吸初始亮度
+  int fadeAmount = 5; //呼吸变化频率
+  int z=0;
 
-void setup() {
-  pinMode(fast,INPUT);
-  pinMode(led1,OUTPUT);
-  pinMode(led2,OUTPUT);
-  pinMode(led3,OUTPUT);
-  pinMode(buzzer,OUTPUT);
-  pinMode(inductor,INPUT);
-}
-
-void loop() {
-  int re=digitalRead(fast);
-  digitalWrite(led3,HIGH);
-  if(re==HIGH){
-    delay(10000);
+  void setup() {
+    pinMode(fast,INPUT);
+    pinMode(led1,OUTPUT);
+    pinMode(led2,OUTPUT);
+    pinMode(led3,OUTPUT);
+    pinMode(buzzer,OUTPUT);
+    pinMode(inductor,INPUT);
   }
-  else{
-    delay(60000);
-  }
-  digitalWrite(led3,LOW);
-  worn();
-}
 
-//呼吸灯
-void breath(){
-    analogWrite(led1, brightness);
-    brightness = brightness + fadeAmount;
-    if (brightness <= 0 || brightness >= 255) {
-      fadeAmount = -fadeAmount;
+  void loop() {
+    int re=digitalRead(fast);
+    digitalWrite(led3,HIGH);
+    if(re==HIGH){
+      delay(10000);
     }
-    delay(30);
-    z+=1;
-}
-
-//警戒状态
-void worn(){
-  //初始化
-   digitalWrite(led1,LOW);
-   digitalWrite(led2,LOW);
-   noTone(buzzer);
-   breath();
-  //读取红外探测器状态
-  int induct=digitalRead(inductor);
-  //如果感应到移动的人体，触发报警
-  if(induct==HIGH){
-    flash();
-  }
-  else{
+    else{
+      delay(60000);
+    }
+    digitalWrite(led3,LOW);
     worn();
   }
-}
 
-void flash() {
-   for(int n=0;n<110;n++){
-      for(int x=0; x<180; x++){
-         //将sin函数角度转化为弧度，并求函数值
-         sinVal1 = (sin(x*(3.1412/180)));
-         sinVal2 = (sin((x+180)*(3.1412/180)));
-         //用sin函数值产生声音的频率
-         toneVal = 2000+(int(sinVal1*1000));
-         //给灯和蜂鸣器
-         tone(buzzer, toneVal);
-         analogWrite(led1, sinVal1*255);
-         analogWrite(led2, sinVal2*255);
-         delay(2);  
-       }
-   }
-   worn();
-}	
+  //呼吸灯
+  void breath(){
+      analogWrite(led1, brightness);
+      brightness = brightness + fadeAmount;
+      if (brightness <= 0  |  |  brightness >= 255) {
+        fadeAmount = -fadeAmount;
+      }
+      delay(30);
+      z+=1;
+  }
+
+  //警戒状态
+  void worn(){
+    //初始化
+    digitalWrite(led1,LOW);
+    digitalWrite(led2,LOW);
+    noTone(buzzer);
+    breath();
+    //读取红外探测器状态
+    int induct=digitalRead(inductor);
+    //如果感应到移动的人体，触发报警
+    if(induct==HIGH){
+      flash();
+    }
+    else{
+      worn();
+    }
+  }
+
+  void flash() {
+    for(int n=0;n<110;n++){
+        for(int x=0; x<180; x++){
+          //将sin函数角度转化为弧度，并求函数值
+          sinVal1 = (sin(x*(3.1412/180)));
+          sinVal2 = (sin((x+180)*(3.1412/180)));
+          //用sin函数值产生声音的频率
+          toneVal = 2000+(int(sinVal1*1000));
+          //给灯和蜂鸣器
+          tone(buzzer, toneVal);
+          analogWrite(led1, sinVal1*255);
+          analogWrite(led2, sinVal2*255);
+          delay(2);  
+        }
+    }
+    worn();
+  }	
 					</code>
 				</pre>
 			</article>
