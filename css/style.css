@@ -2,12 +2,12 @@
 body{
     background-color: #f3f5f6;
     color: #193441;
-    min-width: 80rem;
+    min-width:108rem;
 }
 header{
     height: 5rem;
     position: relative;
-    min-width: 80rem;
+    min-width:108rem;
     padding: 0rem 10rem;
     background-color: #3e606f;
 }
@@ -17,7 +17,7 @@ header>img{
 #content{
     width: 95%;
     margin: 0rem auto 8rem auto;
-    min-width: 80rem;
+    min-width:108rem;
     display: table;
 }
 footer{
@@ -26,7 +26,7 @@ footer{
     width: 100%;
     line-height: 4rem;
     background-color: #3E606F;
-    min-width: 80rem;
+    min-width:108rem;
     color: #FCFFF5;
 }
 footer>p{
